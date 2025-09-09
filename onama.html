@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>O nama — Apartmani Flumen</title>
+  <style>
+    :root{--bg:#0b0e14;--surface:#11151f;--muted:#1a2030;--text:#eaeef6;--accent:#6ee7b7;--shadow:0 10px 30px rgba(0,0,0,.25);--radius:.75rem}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f5f7fa;color:#222;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Noto Sans,sans-serif}
+    header{position:relative;background:linear-gradient(180deg,var(--bg),#162032);color:var(--text);padding:1rem 1rem 2rem}
+    /* Logo + topbar */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{height:60px; width:auto; display:block}
+
+/* NAV više nije absolute – poravna se desno u .topbar */
+.nav{
+  position:static; right:auto; top:auto;   /* poništi staro */
+  display:flex; align-items:center; gap:.75rem;
+}
+
+    .toggle{display:none;appearance:none;border:1px solid #2a344a;background:transparent;color:var(--text);padding:.45rem .6rem;border-radius:.55rem;font-weight:700}
+    .menu,.submenu{list-style:none;margin:0;padding:0}
+    .menu{display:flex;align-items:center;gap:.25rem}
+    .menu>li{position:relative}
+    .menu>li>a,.menu>li>button{appearance:none;border:0;background:transparent;color:var(--text);padding:.5rem .75rem;border-radius:.5rem;font-weight:700;cursor:pointer;text-decoration:none}
+    .menu>li>a:hover,.menu>li>button:hover{background:rgba(255,255,255,.08)}
+    .submenu{position:absolute;left:0;top:calc(100% + .35rem);display:flex;flex-direction:column;min-width:220px;background:var(--surface);border:1px solid var(--muted);border-radius:.75rem;box-shadow:var(--shadow);padding:.35rem;max-height:0;opacity:0;transform:translateY(-6px);pointer-events:none;overflow:hidden;transition:max-height .35s ease,opacity .25s ease,transform .25s ease}
+    .submenu a{color:var(--text);text-decoration:none;padding:.6rem .7rem;border-radius:.5rem;display:block}
+    .submenu a:hover{background:#0e1422}
+    .dropdown.open .submenu{max-height:400px;opacity:1;transform:translateY(0);pointer-events:auto}
+    .menu a[aria-current="page"]{text-decoration:underline;font-weight:700}
+    .hero{display:grid;place-items:center;text-align:center;padding:3rem 1rem 0}
+    .hero h1{margin:.1rem 0;font-size:clamp(2rem,5vw,3rem)}
+    .slogan{font-style:italic;opacity:.9}
+    main{max-width:900px;margin:0 auto;padding:1.5rem 1rem 3rem}
+    h2{margin-top:1.5rem;border-bottom:2px solid var(--accent);padding-bottom:.35rem}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <a href="index.html" class="logo-link">
+      <img src="C:\Users\sanji\Desktop\Multimedija zavrsni\logo-flumen.svg" alt="Apartmani Flumen logo" class="logo">
+    </a>
+
+    <div class="nav" role="navigation" aria-label="Glavna navigacija">
+      <button class="toggle" aria-controls="menu" aria-expanded="false">☰ Meni</button>
+      <ul id="menu" class="menu">
+        <li><a href="index.html">Naslovnica</a></li>
+
+        <li class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true">O nama ▾</button>
+          <ul class="submenu" role="menu">
+            <li><a href="onama.html" aria-current="page">O nama</a></li>
+            <li><a href="lokacija.html">Lokacija</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <button aria-expanded="false" aria-haspopup="true">Galerija ▾</button>
+          <ul class="submenu" role="menu">
+            <li><a href="galerija.html">Fotografije</a></li>
+            <li><a href="logoflumen.html">Logo Flumen</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cjenik.html">Cjenik</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>O nama</h1>
+    <p class="slogan">Privatni iznajmljivači s dugogodišnjim iskustvom.</p>
+  </div>
+</header>
+
+
+<main>
+   <h2>Naša priča</h2>
+  <p>“Apartmani Flumen” obiteljski su posao koji nastaje iz jednostavne ideje: ponuditi miran, uredan i toplo dočekan boravak u srcu Kvarnera. Prve goste ugostili smo prije više od deset godina, a od tada smo kroz iskustvo, učenje i povratne informacije izgradili pristup koji spaja profesionalnost i ljudskost.</p>
+
+  <h2>Kako radimo</h2>
+  <p>Vjerujemo u jasnu komunikaciju, precizne informacije i fleksibilnost. Apartman je opremljen svime što je potrebno za ugodan boravak – od brzog interneta do funkcionalne kuhinje – a pripremamo ga kao da dočekujemo prijatelje. Prije svakog dolaska provodimo temeljito čišćenje i provjeru opreme, a za dulje boravke dogovaramo izmjenu posteljine i održavanje prema Vašim željama.</p>
+
+  <h2>Zašto se gosti vraćaju</h2>
+  <ul>
+    <li><strong>Položaj:</strong> mirna ulica blizu centra i šetnice uz more.</li>
+    <li><strong>Udobnost:</strong> pametan raspored, klimatizacija i balkon s pogledom.</li>
+    <li><strong>Podrška:</strong> brzi odgovori, diskretna prisutnost i konkretne preporuke za izlete, plaže i restorane.</li>
+  </ul>
+
+  <p>Naš je cilj jednostavan: da se odmorite, vidite najbolje od Kvarnera i poželite se vratiti. Dobrodošli u Flumen!</p>
+</main>
+
+<script>
+  const toggle=document.querySelector('.toggle');const menu=document.querySelector('#menu');
+  if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});}
+  function closeOthers(except){document.querySelectorAll('.dropdown').forEach(d=>{if(d!==except){d.classList.remove('open');const b=d.querySelector('button');if(b)b.setAttribute('aria-expanded','false');}});}
+  document.querySelectorAll('.dropdown').forEach(dd=>{const btn=dd.querySelector('button');
+    dd.addEventListener('mouseenter',()=>{closeOthers(dd);dd.classList.add('open');btn.setAttribute('aria-expanded','true');});
+    dd.addEventListener('mouseleave',()=>{dd.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+    btn.addEventListener('click',e=>{e.preventDefault();const isOpen=dd.classList.toggle('open');btn.setAttribute('aria-expanded',String(isOpen));if(isOpen)closeOthers(dd);});
+  });
+  document.addEventListener('click',e=>{if(!e.target.closest('.dropdown')&&!e.target.closest('.toggle')){closeOthers(null);}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeOthers(null);});
+</script>
+</body>
+</html>
